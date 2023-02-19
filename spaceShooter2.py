@@ -71,22 +71,22 @@ class Ship :
         
     def check_move(self,event):
         if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_RIGHT :
+            if event.key == pygame.K_RIGHT or event.key == pygame.K_d:
                 self.mov_r = True
-            if event.key == pygame.K_LEFT :
+            if event.key == pygame.K_LEFT or event.key == pygame.K_a :
                 self.mov_l = True
-            if event.key == pygame.K_UP :
+            if event.key == pygame.K_UP or event.key == pygame.K_w :
                 self.mov_u = True
-            if event.key == pygame.K_DOWN :
+            if event.key == pygame.K_DOWN or event.key == pygame.K_s :
                 self.mov_d = True
         if event.type == pygame.KEYUP :
-            if event.key == pygame.K_RIGHT :
+            if event.key == pygame.K_RIGHT or event.key == pygame.K_d :
                 self.mov_r = False
-            if event.key == pygame.K_LEFT :
+            if event.key == pygame.K_LEFT or event.key == pygame.K_a :
                 self.mov_l = False
-            if event.key == pygame.K_UP :
+            if event.key == pygame.K_UP or event.key == pygame.K_w :
                 self.mov_u = False
-            if event.key == pygame.K_DOWN :
+            if event.key == pygame.K_DOWN or event.key == pygame.K_s :
                 self.mov_d = False        
 
     def move(self):
